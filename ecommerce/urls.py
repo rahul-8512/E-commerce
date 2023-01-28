@@ -1,7 +1,5 @@
 """
-
 Developed By : Rahul Kumar
-
 
 """
 from django.contrib import admin

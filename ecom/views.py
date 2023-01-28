@@ -59,9 +59,9 @@ def afterlogin_view(request):
     else:
         return redirect('admin-dashboard')
 
-#---------------------------------------------------------------------------------
+
 #------------------------ ADMIN RELATED VIEWS START ------------------------------
-#---------------------------------------------------------------------------------
+
 @login_required(login_url='adminlogin')
 def admin_dashboard_view(request):
     # for cards on dashboard
@@ -222,7 +222,7 @@ def search_view(request):
     return render(request,'ecom/index.html',{'products':products,'word':word,'product_count_in_cart':product_count_in_cart})
 
 
-# any one can add product to cart, no need of signin
+# any one can add product to cart, no need of sign in
 def add_to_cart_view(request,pk):
     products=models.Product.objects.all()
 
